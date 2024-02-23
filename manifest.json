@@ -1,0 +1,44 @@
+{
+    "name" : "闪电",
+    "appid" : "__UNI__B0A0BC2",
+    "description" : "",
+    "versionName" : "4.2.7",
+    "versionCode" : 4000270,
+    "transformPx" : false,
+    "permission" : {
+        "scope.userLocation" : {
+            "desc" : "你的位置信息将用于地图的效果展示"
+        }
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 小程序特有相关 */
+        "usingComponents" : {},
+        "appid" : "wx66a19ee384891552",
+        "setting" : {
+            "urlCheck" : false,
+            "minified" : true,
+            "postcss" : false,
+            "es6" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "位置信息将用于地图的效果展示"
+            }
+        },
+        "requiredPrivateInfos" : [ "getLocation" ],
+        "plugins" : {},
+        /* 夜间模式 */
+        "darkmode" : true,
+        "themeLocation" : "theme.json"
+    },
+    "mp-alipay" : {
+        "appid" : "2021004128601128",
+        "usingComponents" : true,
+        "component2" : true,
+        "darkmode" : true,
+        "themeLocation" : "theme.json"
+    }
+}

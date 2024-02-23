@@ -1,0 +1,375 @@
+.slot-wrap {
+  display: flex;
+  align-items: center;
+  /* 如果您想让slot内容占满整个导航栏的宽度 */
+  flex: 1;
+  /* 如果您想让slot内容与导航栏左右有空隙 */
+  /* padding: 0 30rpx; */
+}
+
+.action-bar {
+  text-align: center;
+  pointer-events: auto;
+  position: relative;
+
+  .button {
+    line-height: 40rpx;
+    padding: 16rpx;
+    background-color: #ffffff;
+  }
+
+  .city {
+    position: absolute;
+    border-radius: 40px;
+    padding: 10rpx 30rpx;
+    margin-left: 20rpx;
+    background-color: rgb(247, 247, 247);
+  }
+
+  .scan {
+    width: 240rpx;
+    height: 84rpx;
+    background-image: linear-gradient(230deg, #00a5ff 7%, #0089c9 100%);
+    box-shadow: 0 1px 12px 0 #0089c980;
+    border-radius: 20px;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    color: #ffffff;
+    margin: 0 auto;
+
+    img {
+      width: 40rpx;
+      height: 40rpx;
+      vertical-align: text-bottom;
+      margin-right: 16rpx;
+    }
+  }
+
+  .right {
+    position: absolute;
+    right: 30rpx;
+    bottom: 0;
+
+    .button {
+      position: relative;
+      width: 80rpx;
+      height: 80rpx;
+      margin-top: 20rpx;
+      margin-right: 0;
+      box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 0;
+
+      img {
+        width: 80rpx;
+        height: 80rpx;
+      }
+
+      &.scan {
+        width: 80rpx;
+        height: 80rpx;
+        background-image: linear-gradient(230deg, #00a5ff 7%, #0089c9 100%);
+        box-shadow: 0 1px 12px 0 rgba(0, 201, 164, 0.5);
+        color: #ffffff;
+      }
+
+      &.ui-map {
+        background-image: url(/static/map/ui-map.png);
+        background-size: 80rpx auto;
+        background-position-y: top;
+      }
+      &.ui-list {
+        background-image: url(/static/map/ui-list.png);
+        background-size: 80rpx auto;
+        background-position-y: top;
+      }
+      &.current-location {
+        background-image: url(/static/map/current-location.png);
+        background-size: 80rpx auto;
+        background-position-y: top;
+      }
+    }
+
+    .floatBtn {
+      position: relative;
+      width: 80rpx;
+      height: 80rpx;
+      margin-top: 20rpx;
+      margin-right: 0;
+    }
+  }
+}
+
+.sort-radius {
+  margin: 0 8rpx;
+  background: #7c7c7c15;
+  height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  font-size: 24rpx;
+}
+.flex {
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+  align-items: center;
+  > .city-item {
+    width: 20%;
+    text-align: center;
+  }
+  > .sort-brand-item {
+    width: 20%;
+    text-align: center;
+  }
+}
+
+.sort-active {
+  background: rgba(0, 201, 164, 0.1);
+  border: 1px solid #0974c5;
+  color: #0974c5;
+}
+
+.button-city {
+  line-height: 40rpx;
+  padding: 16rpx;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 40px;
+  padding: 10rpx 30rpx;
+}
+
+.top-wrapper {
+  position: fixed;
+  top: 0;
+  padding-top: calc(var(--status-bar-height) + 50rpx);
+  height: calc(var(--status-bar-height) + 120rpx);
+  width: 100%;
+  z-index: 1;
+}
+
+.view-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 24rpx;
+}
+
+.view-item-change {
+  text-align: right;
+
+  > .-money {
+    font-size: 36rpx;
+    color: $main-color;
+    font-weight: bold;
+  }
+
+  > .-time {
+    font-size: 22rpx;
+    color: #999;
+  }
+}
+
+.view-item-detail {
+  line-height: 1.75;
+  flex: 1;
+
+  > .-title {
+    font-size: 28rpx;
+  }
+
+  > .-number {
+    font-size: 24rpx;
+    color: #bdbfc0;
+  }
+}
+
+.bottom-wrapper {
+  pointer-events: none;
+  position: fixed;
+  bottom: 20rpx;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+}
+
+.stationCard {
+  pointer-events: auto;
+  background-color: #fff;
+  background-image: radial-gradient(
+      ellipse at 64% 0%,
+      #00aeff39 0%,
+      rgba(0, 255, 213, 0) 34%
+    ),
+    radial-gradient(ellipse at 25% 0%, #00ffd534 0%, rgba(0, 255, 213, 0) 35%);
+  width: 700rpx;
+  border-radius: 10px;
+  margin: 20rpx auto;
+  text-align: left;
+  padding: 20rpx 30rpx 20rpx;
+  line-height: 1.5;
+
+  .close {
+    font-size: 40rpx;
+    font-weight: 400;
+    line-height: 40rpx;
+    float: right;
+    margin-left: 20rpx;
+  }
+
+  .title {
+    font-size: 30rpx;
+    line-height: 60rpx;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    .name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .address {
+    height: 36rpx;
+    font-size: 22rpx;
+    color: #707070;
+  }
+
+  .tag {
+    font-size: 22rpx;
+    border: 2rpx solid #80808042;
+    border-radius: 30rpx;
+    display: inline;
+    padding: 4rpx 12rpx;
+    margin-left: 10rpx;
+    line-height: 1;
+
+    img {
+      width: 20rpx;
+      height: 20rpx;
+      margin-right: 6rpx;
+    }
+
+    &.nearest {
+      padding: 4rpx 12rpx;
+      color: #00a5ff;
+      border: 2rpx solid #00a5ff;
+    }
+  }
+
+  .tags {
+    min-height: 48rpx;
+    margin-top: 6rpx;
+  }
+
+  .price {
+    font-size: 36rpx;
+    line-height: 1;
+    font-weight: 500;
+    margin-right: 10rpx;
+  }
+
+  .unit {
+    font-size: 22rpx;
+    color: #707070;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16rpx;
+  }
+
+  .label {
+    display: inline-block;
+    margin-left: 10rpx;
+    height: 40rpx;
+    line-height: 38rpx;
+    font-size: 20rpx;
+    padding: 0 10rpx 0 50rpx;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 42rpx 100%;
+    border-radius: 5px;
+  }
+
+  .label.fast {
+    border: 1px solid #00a5ff;
+    background-image: url(/static/map/fast-pile-count-l.png);
+  }
+
+  .label.slow {
+    margin-left: 20rpx;
+    border: 1px solid #ff9920;
+    background-image: url(/static/map/slow-pile-count-l.png);
+  }
+}
+
+.list {
+  margin-top: 180rpx;
+
+  .stationCard {
+    background: #ffffff;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.coupon-tag {
+  /deep/ .u-tag {
+    color: #ffffff;
+    background-color: #f28227;
+    border-color: transparent;
+    position: absolute;
+    margin-left: 5px;
+    width: 90rpx;
+  }
+}
+
+/* DarkMode 下的样式 start */
+@media (prefers-color-scheme: dark) {
+  .stationCard {
+    color: #ffffff;
+    background-color: #222336;
+
+    .title {
+      color: #ffffff;
+    }
+
+    .divider {
+      border-color: #5a5a5a;
+    }
+
+    .time,
+    .address {
+      color: #a9a9a9;
+    }
+  }
+
+  .list {
+    color: #ffffff;
+    background-color: #121425;
+
+    .stationCard {
+      background-color: #222336;
+    }
+  }
+
+  .action-bar {
+    .button {
+      background: #3a3c58;
+      &.ui-map {
+        background-position-y: bottom !important;
+      }
+      &.ui-list {
+        background-position-y: bottom !important;
+      }
+      &.current-location {
+        background-position-y: bottom !important;
+      }
+    }
+  }
+}

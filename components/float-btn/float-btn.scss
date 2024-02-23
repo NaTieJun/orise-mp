@@ -1,0 +1,87 @@
+@mixin notSelect {
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+@mixin not-touch {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.floatBtn {
+  @include notSelect;
+  @include not-touch();
+  position: absolute;
+  //  z-index: 9999;
+  overflow: visible;
+  width: 160rpx;
+  height: 76rpx;
+  right: 0;
+  // left: calc(100% - 196px);
+  // top: calc(100% - 180px);
+  color: #f5fef9;
+  background: #239ad8;
+  font-size: 28rpx;
+  line-height: 76rpx;
+  text-align: right;
+  box-sizing: border-box;
+  // padding: 10px;
+  &.rightBtn {
+    border-radius: 21rpx;
+  }
+  &.leftBtn {
+    border-radius: 21rpx;
+  }
+  &.moveBtn {
+    border-radius: 21rpx;
+  }
+}
+@keyframes lightning-anim {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.lighting {
+  position: absolute;
+  top: 43%;
+  left: 30rpx;
+  font-size: 10rpx;
+  transform: skewX(-10deg);
+  animation: lightning-anim 2s linear infinite;
+}
+.lighting::before {
+  content: "";
+  position: absolute;
+  margin-top: -20rpx;
+  margin-left: -10rpx;
+  border-top: 15rpx solid transparent;
+  border-right: 10rpx solid #f7f5ff;
+  border-bottom: 15rpx solid #f7f5ff;
+  border-left: 10rpx solid transparent;
+}
+.lighting::after {
+  content: "";
+  position: absolute;
+  margin-left: 6rpx;
+  border-top: 15rpx solid #f7f5ff;
+  border-right: 10rpx solid transparent;
+  border-bottom: 15rpx solid transparent;
+  border-left: 10rpx solid #f7f5ff;
+}

@@ -1,0 +1,201 @@
+{
+    "easycom": {
+        "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+    },
+    "pages": [
+        {
+            "path": "pages/tabbar/station/stationList",
+            "style": {
+                "navigationStyle": "custom",
+                // #ifdef MP-ALIPAY
+                "transparentTitle": "always",
+                // #endif
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/tabbar/mine/my",
+            "style": {
+                "enablePullDownRefresh": true,
+                // #ifdef MP-ALIPAY
+                "transparentTitle": "always",
+                // #endif
+                "navigationStyle": "custom"
+            }
+        }
+    ],
+    "subPackages": [
+        {
+            "root": "pages/mine",
+            "pages": [
+                {
+                    "path": "order/myOrder",
+                    "style": {
+                        "navigationBarTitleText": "我的订单",
+                        "enablePullDownRefresh": true,
+                        "app-plus": {
+                            "bounce": "none"
+                        }
+                    }
+                },
+                {
+                    "path": "order/detail",
+                    "style": {
+                        "navigationStyle": "custom",
+                        // #ifdef MP-ALIPAY
+                        "transparentTitle": "always",
+                        // #endif
+                        "navigationBarTextStyle": "white",
+                        "navigationBarTitleText": "订单详情",
+                        "backgroundColor": "@tabBarBgColor"
+                    }
+                },
+                {
+                    "path": "car/index",
+                    "style": {
+                        "navigationBarTitleText": "我的车辆"
+                    }
+                },
+                {
+                    "path": "car/detail",
+                    "style": {
+                        "navigationBarTitleText": "添加车辆"
+                    }
+                },
+                {
+                    "path": "feedback/list",
+                    "style": {
+                        "navigationBarTitleText": "反馈列表",
+                        "enablePullDownRefresh": true
+                    }
+                },
+                {
+                    "path": "feedback/submit",
+                    "style": {
+                        "navigationBarTitleText": "意见反馈"
+                    }
+                },
+                {
+                    "path": "about/index",
+                    "style": {
+                        "navigationBarTitleText": "关于我们"
+                    }
+                },
+                {
+                    "path": "profile/index",
+                    "style": {
+                        "navigationBarTitleText": "个人信息",
+                        "app-plus": {
+                            "titleNView": {
+                                "padding-right": "12",
+                                "buttons": [
+                                    {
+                                        "text": "保存",
+                                        "fontSize": "16",
+                                        "width": "auto",
+                                        "color": "#FFFFFF"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pages/passport",
+            "pages": [
+                {
+                    "path": "login",
+                    "style": {
+                        "navigationBarTitleText": "",
+                        "navigationStyle": "custom",
+                        // #ifdef MP-ALIPAY
+                        "transparentTitle": "always",
+                        // #endif
+                        "app-plus": {
+                            "titleNView": false,
+                            "animationType": "slide-in-bottom",
+                            "scrollIndicator": "none",
+                            "safearea": {
+                                "bottom": {
+                                    "offset": "none"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "path": "mpLogin",
+                    "style": {
+                        "navigationBarTitleText": "小程序登录",
+                        "navigationStyle": "custom",
+                        // #ifdef MP-ALIPAY
+                        "transparentTitle": "always",
+                        // #endif
+                        "navigationBarTextStyle": "black"
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pages/station",
+            "pages": [
+                {
+                    "path": "index"
+                },
+                {
+                    "path": "charge/charging",
+                    "style": {
+                        "navigationStyle": "custom",
+                        // #ifdef MP-ALIPAY
+                        "transparentTitle": "always",
+                        // #endif
+                        "navigationBarTextStyle": "white",
+                        "app-plus": {
+                            "titleNView": false,
+                            "animationType": "slide-in-bottom",
+                            "scrollIndicator": "none",
+                            "safearea": {
+                                "bottom": {
+                                    "offset": "none"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "@navTxtStyle",
+        "navigationBarTitleText": "",
+        "titleColor": "#303133",
+        "navigationBarBackgroundColor": "@tabBarBgColor",
+        "backgroundColor": "@tabBarBgColor",
+        "app-plus": {
+            // 全局关闭回弹功能
+            "bounce": "none"
+        }
+    },
+    "tabBar": {
+        "color": "#C2C2C2",
+        "selectedColor": "#0974C5",
+        "borderStyle": "black",
+        "backgroundColor": "@tabBarBgColor",
+        "list": [
+            {
+                "pagePath": "pages/tabbar/station/stationList",
+                "iconPath": "static/tabbar/charging.png",
+                "selectedIconPath": "static/tabbar/charging-s.png",
+                "text": "充电"
+            },
+            {
+                "pagePath": "pages/tabbar/mine/my",
+                "iconPath": "static/tabbar/my.png",
+                "selectedIconPath": "static/tabbar/my-s.png",
+                "text": "我的"
+            }
+        ]
+    }
+}
