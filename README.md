@@ -30,7 +30,7 @@
 1. 克隆项目到本地
 
 ```shell
-git clone https://gitee.com/aosheng/aosheng-mp.git
+git clone https://gitee.com/orise001/orise-mp.git
 ```
 
 2. 从`hbulider`中打开项目
