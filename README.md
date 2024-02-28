@@ -73,8 +73,8 @@ git clone https://gitee.com/orise001/orise-mp.git
 在根目录`config`下的`config`设置中配置了一些默认的配置，可以根据自己的需求进行修改
 
 ```
-const name = "lilishop"; //全局商城name
-const schemeName = "lilishop"; //唤醒app需要的schemeName
+const name = "奥升"; //全局商城name
+const schemeName = "Orise"; //唤醒app需要的schemeName
 export default {
   name: name,
   customerServiceMobile: "", //默认客服电话
